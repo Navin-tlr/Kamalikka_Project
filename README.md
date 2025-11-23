@@ -25,11 +25,20 @@ This project is a Proof of Concept (POC) for a blockchain-based academic credent
 ## Setup Instructions
 
 ### 1. Clone and Install Dependencies
+If you downloaded the ZIP file:
+1. Extract the ZIP file.
+2. Open a terminal in the extracted folder.
+
+Run the following commands to install dependencies for both the backend and frontend:
+
 ```bash
-cd credential-verifier
+# Install root dependencies (Hardhat, etc.)
 npm install
+
+# Install frontend dependencies
 cd frontend
 npm install
+cd ..
 ```
 
 ### 2. Smart Contract Deployment (Local Hardhat Network)
