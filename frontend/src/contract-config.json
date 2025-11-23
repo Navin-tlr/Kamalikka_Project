@@ -1,0 +1,162 @@
+{
+    "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "abi": [
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "bytes32",
+                    "name": "certHash",
+                    "type": "bytes32"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "issuer",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string",
+                    "name": "studentId",
+                    "type": "string"
+                }
+            ],
+            "name": "CertificateIssued",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "bytes32",
+                    "name": "certHash",
+                    "type": "bytes32"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "revoker",
+                    "type": "address"
+                }
+            ],
+            "name": "CertificateRevoked",
+            "type": "event"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_studentName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_studentId",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_courseName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_grade",
+                    "type": "string"
+                }
+            ],
+            "name": "issueCertificate",
+            "outputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "_certHash",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "revokeCertificate",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "_certHash",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "verifyCertificate",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "isValid",
+                    "type": "bool"
+                },
+                {
+                    "components": [
+                        {
+                            "internalType": "address",
+                            "name": "issuer",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "studentName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "studentId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "courseName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "grade",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "issueDate",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "isRevoked",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bytes32",
+                            "name": "certHash",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "internalType": "struct CredentialVerifier.Certificate",
+                    "name": "metadata",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+node_modules
+.env
+coverage
+coverage.json
+typechain
+typechain-types
+artifacts
+cache
+dist
+frontend/dist
+frontend/node_modules
+.DS_Store
+hardhat.config.js.backup
